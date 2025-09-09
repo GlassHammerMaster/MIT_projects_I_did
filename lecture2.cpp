@@ -1,16 +1,24 @@
 #include <iostream>
 
+int do_while_example();
+
 int main() {
     bool x;
     int y;
     int z;
     int w = 0;
+
     while (w < 10) {
         std::cout << w << " ";
         w++;
     }
-    std::cout << "\nenter binary value (true or false): ";
-    std::cin >> x;
+    for (int i = 0; i < 10; i++) {
+        std::cout << i << " ";
+    }
+    std::cout << "\nenter binary value (0 or 1): ";
+    int temp;
+    std::cin >> temp;
+    x = (temp != 0); // convert to bool
     if (x) {
         std::cout << "true" << std::endl;
     } else {
@@ -40,5 +48,18 @@ int main() {
         default:
             std::cout << "y is not 1, 2, or 3";
     }
+    do_while_example();
+    return 0;
+}
+
+int do_while_example() {
+    int x;
+    do {
+        std::cout << "\ndo you want to continue? (1 for yes, 0 for no): ";
+        std::cin >> x;
+        if (x != 1 && x != 0) {
+            std::cout << "invalid input, try again.";
+        }
+    } while (x != 0);
     return 0;
 }
