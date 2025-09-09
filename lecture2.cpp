@@ -9,10 +9,8 @@ int main() {
         std::cout << w << " ";
         w++;
     }
-    std::cout << "\nenter binary value (0 or 1): ";
-    int temp;
-    std::cin >> temp;
-    x = (temp != 0); // convert to bool
+    std::cout << "\nenter binary value (true or false): ";
+    std::cin >> x;
     if (x) {
         std::cout << "true" << std::endl;
     } else {
