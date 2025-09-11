@@ -1,4 +1,5 @@
 #include <iostream>
+#include "library.cpp"
 int answer;
 int input;
 int exponent;
@@ -18,8 +19,10 @@ int main() {
         std::cout << input << " is even" << std::endl;
     }else{
         std::cout << input << " is odd" << std::endl;
-    return 0;
     }
+    std::cout << "the square of " << input << " is " << square(input) << std::endl;
+    std::cout << "the cube of " << input << " is " << cube(input) << std::endl;
+    return 0;
 }
 
 int raiseToPower (int base, int exponent) {
