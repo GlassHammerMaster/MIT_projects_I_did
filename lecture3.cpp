@@ -1,5 +1,5 @@
 #include <iostream>
-#include "library.cpp"
+#include "library.h"
 int answer;
 int input;
 int exponent;
