@@ -22,6 +22,8 @@ int main() {
     }
     std::cout << "the square of " << input << " is " << square(input) << std::endl;
     std::cout << "the cube of " << input << " is " << cube(input) << std::endl;
+    increment(input);
+    std::cout << "after increment, input is " << input << std::endl;
     return 0;
 }
 
