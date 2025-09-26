@@ -3,12 +3,12 @@
 int answer;
 int input;
 int exponent;
-int raiseToPower (int base, int exponent);
-bool even (int num);
+int raiseToPower (int base, int exponent); //declaration
+bool even (int num); //declaration
 int main() {
     std::cout << "Enter a number: ";
     std::cin >> input;
-    std::cout << "enter an exponent: ";
+    std::cout << "enter a second number: ";
     std::cin >> exponent;
     answer = raiseToPower(input, exponent);
     std::cout << input << " raised to the power of " << exponent << " is " << answer << std::endl;
@@ -24,20 +24,23 @@ int main() {
     std::cout << "the cube of " << input << " is " << cube(input) << std::endl;
     increment(input);
     std::cout << "after increment, input is " << input << std::endl;
+    std::cout << "before swap, input is " << input << " and exponent is " << exponent << std::endl;
+    swap(input, exponent);
+    std::cout << "after swap, input is " << input << " and exponent is " << exponent << std::endl;
     return 0;
 }
 
 int raiseToPower (int base, int exponent) {
     int result = 1;
-    for (int i = 0; i < exponent; i++) {
-        result *= base;
+    for (int i = 0; i < exponent; i++) { //for each exponent, will multiply base by result once
+        result *= base; //result is then switched to the new value and loop continues
     }
     return result;
 }
 
 bool even (int num) {
-    if ( num % 2 == 0 ) {
-        return true;
+    if ( num % 2 == 0 ) { //if the number is divisible by 2 with no remainder,
+        return true; //it is even
     }else{
         return false;
     }

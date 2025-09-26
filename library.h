@@ -10,3 +10,8 @@ void increment(int &a) {
     a = a+1; //putting & before a variable means you are directly modifying the original variable
     std::cout << "input in increment is " << a << std::endl;
     }
+void swap(int &a, int &b) {
+    int t = a; //temp variable to hold the value of a
+    a = b; //a is now b
+    b = t; //b is now the original value of a
+}
